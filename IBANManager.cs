@@ -5,16 +5,16 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 
-namespace IBAN_Manager
+namespace REFIBAN_Manager
 {
-    public class IBANManager
+    public class REFIBANManager
     {
         private List<string> ibanCharList = new List<string>(34);
         private string iban = String.Empty;
 
         private static Dictionary<string, string> tableValues = new Dictionary<string, string>();
 
-        public IBANManager(string ibanCode)
+        public REFIBANManager(string ibanCode)
         {
             ibanCode.Replace(" ", String.Empty);
 
@@ -24,7 +24,7 @@ namespace IBAN_Manager
 
 
         }
-        static IBANManager()
+        static REFIBANManager()
         {
             Table.LoadTable(tableValues);
         }
@@ -97,7 +97,7 @@ namespace IBAN_Manager
             return validIban;
         }
 
-        public string CheckIban()
+        public string CheckREFIBAN()
         {
             string validIban = "Invalid";
             try
