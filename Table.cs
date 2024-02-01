@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace IBAN_Manager
+namespace REFIBAN_Manager
 {
     class Table
 {
@@ -11,7 +11,7 @@ namespace IBAN_Manager
     {
         try
         {
-            var lines = File.ReadAllLines("table.ini");
+            var lines = File.ReadAllLines("reftable.ini");
 
             foreach (var line in lines)
             {
